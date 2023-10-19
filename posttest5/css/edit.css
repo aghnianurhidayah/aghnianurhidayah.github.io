@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inria+Serif:ital,wght@0,400;1,700&family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --primary-color: #fff;
+  --secondary-color: #ee0c0c;
+  --shadow: rgba(0, 0, 0, 0.2);
+  --hero: rgba(255, 250, 138, 0.6);
+}
+
+.dark-theme {
+  --primary-color: #000106;
+  --secondary-color: #ee0c0c;
+  --shadow: rgba(218, 23, 23, 0.2);
+  --hero: rgba(0, 0, 0, 0.7);
+}
+
+.content {
+  margin: 50px 0;
+}
+
+.content h3 {
+  text-align: center;
+  color: var(--secondary-color);
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.order {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+.order div {
+  height: 450px;
+  width: 500px;
+  border-radius: 20px;
+  align-items: center;
+  box-shadow: 0 4px 8px 0 var(--shadow), 0 6px 20px 0 var(--shadow);
+}
+
+.form-box form {
+  margin-top: 10px;
+  display: grid;
+  justify-content: center;
+}
+
+.form-box form p {
+  margin: 6px 0;
+}
+
+.form-box #email {
+  height: 30px;
+  padding-left: 10px;
+}
+
+.form-box #name {
+  height: 30px;
+  padding-left: 10px;
+}
+
+.form-box #qty {
+  height: 30px;
+  padding-left: 10px;
+}
+
+.form-box #pizza {
+  height: 30px;
+  padding-left: 10px;
+}
+
+.form-box #address {
+  height: 30px;
+  padding-left: 10px;
+}
+
+.form-box .button {
+  height: 30px;
+  border-style: none;
+  background-color: var(--secondary-color);
+  border-radius: 7px;
+  color: var(--primary-color);
+}
+
+.form-box .button:hover {
+  opacity: 0.8;
+}
