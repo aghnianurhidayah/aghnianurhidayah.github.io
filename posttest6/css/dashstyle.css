@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inria+Serif:ital,wght@0,400;1,700&family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --primary-color: #fff;
+  --secondary-color: #ee0c0c;
+  --shadow: rgba(0, 0, 0, 0.2);
+  --hero: rgba(255, 250, 138, 0.6);
+}
+
+.dark-theme {
+  --primary-color: #000106;
+  --secondary-color: #ee0c0c;
+  --shadow: rgba(218, 23, 23, 0.2);
+  --hero: rgba(0, 0, 0, 0.7);
+}
+
+nav {
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  align-items: center;
+  padding: 20px 100px;
+}
+
+nav .logo {
+  font-weight: 900;
+  font-size: 24px;
+  color: var(--secondary-color);
+}
+
+nav a {
+  text-decoration: none;
+}
+
+nav .button {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  padding: 5px 12px;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+nav .button:hover {
+  transform: scale(1.1);
+}
+
+.container {
+  padding: 20px 0;
+  align-items: center;
+  padding: 20px 100px;
+}
+
+.dashboard .add-button {
+  text-decoration: none;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  padding: 5px 12px;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.dashboard .add-button:hover {
+  opacity: 0.7;
+}
+
+.dashboard table {
+  width: 100%;
+  border: 2px solid black;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.dashboard table th,
+td {
+  padding: 8px;
+  border: 2px solid black;
+}
+
+.action {
+  text-align: center;
+}
+
+.edit-btn {
+  background-color: #f0ad4e;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  margin-bottom: 5px;
+}
+
+.edit-btn img {
+  width: 20px;
+}
+
+.delete-btn {
+  background-color: #bb2124;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+}
+
+.content {
+  margin-top: 6%;
+}
+
+.content h3 {
+  text-align: center;
+  color: var(--secondary-color);
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+.menu div {
+  height: 280px;
+  width: 500px;
+  border-radius: 20px;
+  align-items: center;
+  box-shadow: 0 4px 8px 0 var(--shadow), 0 6px 20px 0 var(--shadow);
+}
+
+.form-box form {
+  margin-top: 10px;
+  display: grid;
+  justify-content: center;
+}
+
+.form-box form p {
+  margin: 6px 0;
+}
+
+.form-box #email {
+  height: 30px;
+  padding-left: 10px;
+}
+
+.form-box #name {
+  height: 30px;
+  padding-left: 10px;
+}
+
+.form-box #qty {
+  height: 30px;
+  padding-left: 10px;
+}
+
+.form-box #pizza {
+  height: 30px;
+  padding-left: 10px;
+}
+
+.form-box #address {
+  height: 30px;
+  padding-left: 10px;
+}
+
+.form-box #menuname {
+  height: 30px;
+  padding-left: 10px;
+}
+
+.form-box #prize {
+  height: 30px;
+  padding-left: 10px;
+}
+
+.form-box .button {
+  height: 30px;
+  border-style: none;
+  background-color: var(--secondary-color);
+  border-radius: 7px;
+  color: var(--primary-color);
+}
+
+.form-box .button:hover {
+  opacity: 0.8;
+}
+
+.dash-box {
+  display: inline-flex;
+  align-items: center;
+}
+
+.time {
+  color: var(--secondary-color);
+}
+
+.dash-box div {
+  padding: 30px;
+  margin: 50px;
+  border-radius: 20px;
+  align-items: center;
+  box-shadow: 0 4px 8px 0 var(--shadow), 0 6px 20px 0 var(--shadow);
+  text-align: center;
+  transition: 0.3s;
+}
+
+.dash-box a {
+  text-decoration: none;
+  color: var(--secondary-color);
+}
+
+.dash-box img {
+  margin-bottom: 10px;
+}
+
+.dash-box div:hover {
+  transform: scale(1.1);
+}
