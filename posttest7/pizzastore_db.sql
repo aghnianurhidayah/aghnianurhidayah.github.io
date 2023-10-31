@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 25, 2023 at 11:50 AM
+-- Generation Time: Nov 01, 2023 at 12:21 AM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -74,7 +74,7 @@ CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `username` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
-  `passw` varchar(25) NOT NULL
+  `passw` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -82,9 +82,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `email`, `passw`) VALUES
-(1, 'nia', 'nia@gmail.com', 'nia123'),
 (2, 'admin', 'admin@gmail.com', 'admin123'),
-(3, 'bani', 'bani@gmail.com', 'bni123');
+(6, 'ara', 'ara@gmail.com', '$2y$10$.73vKyDw0ydQ8PvhAOAgYeoBzPjba9HYx8gQIlvUrJYulZhdM3ovm');
 
 --
 -- Indexes for dumped tables
@@ -128,7 +127,7 @@ ALTER TABLE `orders`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
