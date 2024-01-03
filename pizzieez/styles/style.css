@@ -1,0 +1,279 @@
+@import url("https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inria+Serif:ital,wght@0,400;1,700&family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --primary-color: #ee0c0c;
+  --secondary-color: #fff;
+}
+
+/* navbar */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 150px;
+  color: var(--primary-color);
+}
+
+.nav-logo {
+  font-size: 30px;
+  font-weight: 800;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+nav a {
+  text-decoration: none;
+  margin-left: 60px;
+  color: var(--primary-color);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+nav a {
+  position: relative;
+}
+
+nav a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  margin-bottom: -5px;
+  width: 0%;
+  content: ".";
+  color: transparent;
+  background: var(--primary-color);
+  height: 3px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+nav a:hover:after {
+  width: 70%;
+}
+
+.menu-icon {
+  font-size: 24px;
+  display: none;
+}
+
+/* hero */
+
+.hero {
+  background-color: var(--secondary-color);
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  background-image: url(../assets/hero.jpg);
+  background-size: cover;
+}
+
+.img-overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 250, 138, 0.5);
+}
+
+.hero-content {
+  position: absolute;
+  color: var(--primary-color);
+}
+
+.hero-content p {
+  font-size: 48px;
+  font-weight: bolder;
+  margin: 10px 0;
+}
+
+.hero-content .tagline ul li {
+  list-style: none;
+  display: inline;
+  margin: 0 30px;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.hero-content .order-btn {
+  margin-top: 50px;
+}
+
+.hero-content .order-btn a {
+  padding: 12px 30px;
+  border-radius: 10px;
+  font-size: 18px;
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  background-color: var(--primary-color);
+}
+
+/* content */
+.content .fav-menu {
+  margin: 50px 0px;
+  color: var(--primary-color);
+}
+
+.fav-menu h1 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.boxes {
+    display: flex;
+    justify-content: center;
+}
+
+.box {
+  width: 200px;
+  padding: 0px 20px 20px 20px;
+  margin: 30px;
+  box-shadow: 0 0px 15px 0 rgba(0, 0, 0, 0.06), 0 5px 15px 0 rgba(0, 0, 0, 0.06);
+  border-radius: 25px;
+  transition: 0.3s;
+}
+
+.box img {
+  width: 100%;
+}
+
+.menu{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--primary-color);
+}
+
+.box .menu p {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.box h3 {
+  font-size: 16px;
+}
+
+.box p {
+  font-size: 12px;
+}
+
+.box a {
+  position: absolute;
+}
+
+.box:hover {
+  transform: scale(1.1);
+  opacity: 50%;
+}
+
+@media only screen and (max-width: 900px) {
+  nav {
+    padding: 20px 90px;
+  }
+
+  .nav-logo {
+    font-size: 24px;
+  }
+
+  nav a {
+    font-size: 14px;
+    margin-left: 40px;
+  }
+
+  .hero {
+    height: 350px;
+  }
+
+  .hero-content p {
+    font-size: 36px;
+    margin: 5px 0;
+  }
+
+  .hero-content .tagline ul li {
+    margin: 0 20px;
+    font-size: 18px;
+  }
+
+  .hero-content .order-btn {
+    margin-top: 30px;
+  }
+
+  .hero-content .order-btn a {
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  nav {
+    padding: 15px 50px;
+    flex-wrap: wrap;
+  }
+
+  .nav-logo {
+    font-size: 24px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    margin: 10px 0px;
+  }
+
+  nav ul.d-none {
+    display: none;
+  }
+
+  nav li {
+    margin: 15px 0px;
+  }
+
+  nav a {
+    font-size: 16px;
+    margin-left: 0;
+  }
+
+  .menu-icon {
+    display: flex;
+    align-items: center;
+  }
+
+  .hero {
+    height: 300px;
+  }
+
+  .hero-img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .hero-content p {
+    font-size: 24px;
+    margin: 5px 0;
+  }
+
+  .hero-content .tagline ul li {
+    font-size: 14px;
+  }
+}
