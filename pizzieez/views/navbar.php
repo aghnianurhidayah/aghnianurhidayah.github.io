@@ -20,7 +20,17 @@
             <li><a href="index.php">Home</a></li>
             <li><a href="menu.php">Menu</a></li>
             <li><a href="ordered.php">My Order</a></li>
+            <?php 
+            if(isset($_SESSION['username'])){
+            ?>
+            <li><div class="logout-btn"><a href="logout.php">Logout</a></div></li>
+            <?php 
+            } else {
+            ?>
             <li><div class="login-btn"><a href="login.php">Login / Sign Up</a></div></li>
+            <?php 
+            } 
+            ?>
         </ul>
     </nav>
 

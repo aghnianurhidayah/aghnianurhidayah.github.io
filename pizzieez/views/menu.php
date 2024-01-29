@@ -1,3 +1,14 @@
+<?php
+    require "../db_conn/db_connect.php";
+
+    $sql = mysqli_query($conn, "SELECT * FROM menu");
+
+    $menus = [];
+    while ($row = mysqli_fetch_assoc($sql)) {
+        $menus[] = $row;
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,70 +26,21 @@
     <div class="menus">
         <h1>OUR MENUS</h1>
         <div class="row">
+            <?php 
+            $i = 1;
+            foreach ($menus as $menu) : 
+            ?>
             <div class="box">
-                <img src="../assets/img/pizza-2.png" alt="" />
+                <img src="../assets/img/<?= $menu['pic']; ?>" alt="" />
                 <div class="menu">
-                    <p>PIZZA 1</p>
-                    <p>$6</p>
+                    <p><?= $menu['name_menu']; ?></p>
+                    <p>$<?= $menu['price']; ?></p>
                 </div>
-                <p>Cheedar Cheese, Mozarella Cheese, Tomato Sauce</p>
+                <p><?= $menu['desc_menu']; ?></p>
             </div>
-            <div class="box">
-                <img src="../assets/img/pizza-2.png" alt="" />
-                <div class="menu">
-                    <p>PIZZA 2</p>
-                    <p>$6</p>
-                </div>
-                <p>Cheedar Cheese, Mozarella Cheese, Tomato Sauce</p>
-            </div>
-            <div class="box">
-                <img src="../assets/img/pizza-2.png" alt="" />
-                <div class="menu">
-                    <p>PIZZA 3</p>
-                    <p>$6</p>
-                </div>
-                <p>Cheedar Cheese, Mozarella Cheese, Tomato Sauce</p>
-            </div>
-            <div class="box">
-                <img src="../assets/img/pizza-2.png" alt="" />
-                <div class="menu">
-                    <p>PIZZA 4</p>
-                    <p>$6</p>
-                </div>
-                <p>Cheedar Cheese, Mozarella Cheese, Tomato Sauce</p>
-            </div>
-            <div class="box">
-                <img src="../assets/img/pizza-2.png" alt="" />
-                <div class="menu">
-                    <p>PIZZA 5</p>
-                    <p>$6</p>
-                </div>
-                <p>Cheedar Cheese, Mozarella Cheese, Tomato Sauce</p>
-            </div>
-            <div class="box">
-                <img src="../assets/img/pizza-2.png" alt="" />
-                <div class="menu">
-                    <p>PIZZA 6</p>
-                    <p>$6</p>
-                </div>
-                <p>Cheedar Cheese, Mozarella Cheese, Tomato Sauce</p>
-            </div>
-            <div class="box">
-                <img src="../assets/img/pizza-2.png" alt="" />
-                <div class="menu">
-                    <p>PIZZA 7</p>
-                    <p>$6</p>
-                </div>
-                <p>Cheedar Cheese, Mozarella Cheese, Tomato Sauce</p>
-            </div>
-            <div class="box">
-                <img src="../assets/img/pizza-2.png" alt="" />
-                <div class="menu">
-                    <p>PIZZA 8</p>
-                    <p>$6</p>
-                </div>
-                <p>Cheedar Cheese, Mozarella Cheese, Tomato Sauce</p>
-            </div>
+            <?php
+            $i++;
+            endforeach; ?>
         </div>
     </div>
 

@@ -81,7 +81,8 @@ nav ul a:hover:after {
   width: 70%;
 }
 
-nav ul .login-btn a:after {
+nav ul .login-btn a:after,
+nav ul .logout-btn a:after {
   display: none;
 }
 
@@ -90,7 +91,8 @@ nav ul .login-btn a:after {
   display: none;
 }
 
-.login-btn a {
+.login-btn a,
+.logout-btn a {
   background-color: #ee0c0c;
   padding: 8px 20px;
   border-radius: 10px;
@@ -99,7 +101,8 @@ nav ul .login-btn a:after {
   margin-left: 50px;
 }
 
-.login-btn a:hover {
+.login-btn a:hover,
+.logout-btn a:hover {
   background-color: #ce0a0a;
 }
 
@@ -267,10 +270,11 @@ nav ul .login-btn a:after {
 }
 
 .form-order .input-field input {
-  padding: 8px;
+  padding: 8px 10px;
   margin: 5px 0;
   border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 8px;
+  font-size: 14px;
 }
 
 .form-order .input-field select {
@@ -278,6 +282,7 @@ nav ul .login-btn a:after {
   margin: 5px 0;
   border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 8px;
+  font-size: 14px;
 }
 
 .form-order .submit-btn input {
@@ -290,6 +295,11 @@ nav ul .login-btn a:after {
 .form-order .submit-btn input:hover {
   background-color: #ce0a0a;
   cursor: pointer;
+}
+
+.form-order .input-field .payment-choice {
+  color: black;
+  font-size: 14px;
 }
 
 /* footer */
@@ -422,12 +432,12 @@ footer .cr {
   box-shadow: 0 0px 15px 0 rgba(0, 0, 0, 0.06), 0 5px 15px 0 rgba(0, 0, 0, 0.06);
   padding: 20px 50px;
   border-radius: 14px;
-  margin: 30px 0;
   background-color: var(--secondary-color);
 }
 
 .login .input-field {
   display: grid;
+  margin: 6px 0;
 }
 
 .login input {
@@ -438,7 +448,6 @@ footer .cr {
 }
 
 .login .submit-login {
-  margin: 10px 0;
   width: 100%;
   background-color: #ee0c0c;
   border: none;
@@ -477,12 +486,14 @@ footer .cr {
   box-shadow: 0 0px 15px 0 rgba(0, 0, 0, 0.06), 0 5px 15px 0 rgba(0, 0, 0, 0.06);
   padding: 20px 50px;
   border-radius: 14px;
-  margin: 30px 0;
   background-color: var(--secondary-color);
+  align-items: center;
+  margin: 30px 0;
 }
 
 .signup .input-field {
   display: grid;
+  margin: 6px 0;
 }
 
 .signup input {
@@ -493,7 +504,6 @@ footer .cr {
 }
 
 .signup .submit-signup {
-  margin: 10px 0;
   width: 100%;
   background-color: #ee0c0c;
   border: none;
@@ -527,6 +537,12 @@ footer .cr {
   }
 
   .login-btn a {
+    padding: 6px 12px;
+    border-radius: 8px;
+    margin-left: 30px;
+  }
+
+  .logout-btn a {
     padding: 6px 12px;
     border-radius: 8px;
     margin-left: 30px;
@@ -704,7 +720,8 @@ footer .cr {
     margin-left: 0;
   }
 
-  nav ul .login-btn a {
+  nav ul .login-btn a,
+  nav ul .logout-btn a {
     margin-left: 0;
   }
 
